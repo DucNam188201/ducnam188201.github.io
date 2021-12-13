@@ -102,6 +102,8 @@
 
 .header__host {
     font-weight: 600;
+    text-decoration: none;
+    color: var(--white-color);
     padding: 12px;
     margin: 0;
     text-shadow: 0px 1px 10px rgb(0, 0, 0, 0.5);
@@ -170,17 +172,31 @@
 .header__user-choice {
     display: none;
     position: absolute;
+    padding: 14px 0 12px 10px;
     top: 110%;
     right: 0;
     background-color: #fff;
     border-radius: 10px;
-    width: 240px;
+    width: 180px;
     font-weight: 300;
     overflow: hidden;
     z-index: 1;
     box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.5);
     animation: headerUser linear 0.25s;
     will-change: opacity, transform;
+
+}
+
+.choice__link{
+    text-decoration: none;
+    display: block;
+    font-size: 1.4rem;
+    padding: 8px 0;
+    color: var(--text-color);
+}
+
+.choice__link:hover{
+    font-size: 1.6rem;
 }
 
 @keyframes headerUser {
@@ -732,7 +748,7 @@
 .header__background-text {
     position: relative;
     display: block;
-    color: #e6e3e6;
+    color: #fff;
     margin: 0 auto 20px;
     font-size: 2.5rem;
     font-weight: 800;
@@ -813,14 +829,14 @@
 }
 
 .container__tittle-text {
-    padding: 38px 0 24px;
+    padding: 38px 0 40px;
     font-size: 3.5rem;
+    color: rgb(104, 100, 100);
 }
 
 .container__tittle-link {
     text-decoration: none;
     color: var(--text-color);
-    /* border: 1px solid black; */
 }
 
 .container__tittle-area {
@@ -830,8 +846,11 @@
     margin-bottom: 16px;
 }
 
-.container__tittle-area:hover img {
-    transform: scale(1.05);
+.container__tittle-area:hover{
+    background-color: rgba(219, 202, 204, 0.6);
+    border-radius: 5px;
+    transform: scale(1.1);
+    transition: transform ease 0.4s;
 }
 
 .container__tittle-img {
@@ -847,8 +866,6 @@
     height: 100%;
     object-fit: cover;
     image-rendering: pixelated;
-    transform: scale(1.5);
-    transition: transform ease-in 0.25s;
 }
 
 
@@ -856,6 +873,7 @@
     flex: 1;
     margin-left: 18px;
 }
+
 
 .container__tittle-location {
     font-size: 1.5rem;
@@ -868,6 +886,7 @@
 }
 
 
+
 /* -----Container Body----- */
 .container__body-link {
     text-decoration: none;
@@ -876,8 +895,9 @@
     /* border: 1px solid black; */
 }
 
+
 .container__body-link:hover img {
-    transform: scale(1.05);
+    transform: scale(0.8);
 }
 
 .container__body-condition {
@@ -969,7 +989,7 @@
 }
 
 .container__experience:hover img {
-    transform: scale(1.01);
+    transform: scale(0.9);
 }
 .container__experience-img {
     height: 385px;
